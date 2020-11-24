@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const userService = require("./feature/user/user_service");
+const productService = require("./feature/product/product_service");
 
 mongoose.connect("mongodb://localhost/shoppi", {
   useNewUrlParser: true,
@@ -15,5 +16,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(userService);
+app.use(productService);
 
 app.listen(port, () => console.log(`Example app listening on port port!`));

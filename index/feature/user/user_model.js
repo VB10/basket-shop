@@ -1,7 +1,7 @@
 //Creating a Auth Model in userModel.js
 const mongoose = require("mongoose"); // Erase if already required
 
-const Product = require("../product/product_model").schema;
+const Product = require("../product/model/product_model").schema;
 // Declare the Schema of the Mongo model
 var userSchema = new mongoose.Schema({
   name: {
